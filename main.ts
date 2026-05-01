@@ -1,5 +1,4 @@
-//% color="#4B7BEC"
-//% groups="['basic', 'advanced]"
+
 
 enum Physics {
     //% block="ax (x acceleration)"
@@ -18,6 +17,8 @@ enum Physics {
 
 enum Angles {yaw, roll, pitch}
 
+//% color="#4B7BEC"
+//% groups="['basic', 'advanced]"
 namespace movement {
 
     //% blockId=moveForwardAtSpeed
