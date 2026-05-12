@@ -137,3 +137,30 @@ namespace movement {
 
 
 }
+
+
+enum SpritesInProject {
+    rob,
+    drone,
+    me
+}
+
+//% color="#FFAB19"
+namespace control {
+
+    //% blockId=createCloneOfAt
+    //% block="create clone of $clone at x: $x y: $y z: $z"
+    //% inlineInputMode=inline
+    //% weight=100
+    export function createCloneOfAt(clone: SpritesInProject, x: number, y: number, z: number) {
+
+    }
+
+    //% blockId=createCloneOfHere
+    //% block="create clone of $clone here"
+    //% weight=99
+    export function createCloneOfHere(clone: SpritesInProject) {
+
+    }
+
+}
