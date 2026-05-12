@@ -1,4 +1,13 @@
+enum Direction {
+    forward,
+    backward,
+    up,
+    down,
+    left,
+    right
+}
 
+enum Axis { x, y, z }
 
 enum Physics {
     //% block="ax (x acceleration)"
@@ -21,52 +30,22 @@ enum Angles {yaw, roll, pitch}
 //% groups="['basic', 'advanced]"
 namespace movement {
 
-    //% blockId=moveForwardAtSpeed
-    //% block="move forward at speed $speed for $seconds"
+    //% blockId=moveDirectionAtSpeed
+    //% block="move $direction at speed $speed"
     //% weight=100
     //% group='basic'
-    export function moveForwardAtSpeed(speed: number, seconds: number){
+    export function moveDirectionAtSpeed(direction: Direction, speed: number) {
+
+    }
+
+    //% blockId=moveDirectionAtSpeedFor
+    //% block="move $direction at speed $speed for $seconds"
+    //% weight=99
+    //% group='basic'
+    export function moveDirectionAtSpeedFor(direction: Direction, speed: number, seconds: number){
         
     }
 
-    //% blockId=moveBackwardAtSpeed
-    //% block="move backward at speed $speed for $seconds"
-    //% weight=99
-    //% group='basic'
-    export function moveBackwardAtSpeed(speed: number, seconds: number) {
-    }
-
-    //% blockId=moveLeftAtSpeed
-    //% block="move left at speed $speed for $seconds"
-    //% weight=98
-    //% group='basic'
-    export function moveLeftAtSpeed(speed: number, seconds: number) {
-
-    }
-
-    //% blockId=moveRightAtSpeed
-    //% block="move right at speed $speed for $seconds"
-    //% weight=97
-    //% group='basic'
-    export function moveRightAtSpeed(speed: number, seconds: number) {
-
-    }
-
-    //% blockId=moveUpAtSpeed
-    //% block="move up at speed $speed for $seconds"
-    //% weight=96
-    //% group='basic'
-    export function moveUpAtSpeed(speed: number, seconds: number) {
-
-    }
-
-    //% blockId=moveDownAtSpeed
-    //% block="move down at speed $speed for $seconds"
-    //% weight=95
-    //% group='basic'
-    export function moveDownAtSpeed(speed: number, seconds: number) {
-
-    }
 
     //% blockId=turnClockwise
     //% block="turn clockwise $degrees degrees"
@@ -93,42 +72,26 @@ namespace movement {
     }
 
     //% blockId=goToXY
-    //% block="go to x: $x y: $y"
+    //% block="go to x: $x y: $y z: $z"
     //% weight=79
     //% group='basic'
-    export function goToXY(x: number, y: number) {
+    export function goToXYZ(x: number, y: number, z: number) {
 
     }
 
-    //% blockId=changeY
-    //% block="change y by $y"
-    //% weight=78
-    //% group='basic'
-    export function changeY(y: number) {
-
-    }
-
-    //% blockId=setX
-    //% block="set x to $x"
+    //% blockId=setAxis
+    //% block="set $axis to $value"
     //% weight=77
     //% group='basic'
-    export function setX(x: number) {
+    export function setAxis(axis: Axis, value: number) {
 
     }
 
-    //% blockId=changeX
-    //% block="change x by $x"
+    //% blockId=changeAxis
+    //% block="change $axis by $value"
     //% weight=76
     //% group='basic'
-    export function changeX(x: number) {
-
-    }
-
-    //% blockId=setY
-    //% block="set y to $y"
-    //% weight=75
-    //% group='basic'
-    export function setY(y: number) {
+    export function changeAxis(axis: Axis, value: number) {
 
     }
 
